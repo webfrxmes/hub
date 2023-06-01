@@ -1,90 +1,11 @@
-local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
-local Window = Rayfield:CreateWindow({
-   Name = "City of Greenpoint!",
-   LoadingTitle = "City of Greenpoint!",
-   LoadingSubtitle = "by webfrxmes",
-})
-local Tab = Window:CreateTab("Main", 4483362458) 
-local Section = Tab:CreateSection("Main",false)
-local Button = Tab:CreateButton({
-   Name = "Yield",
-   Info = "Open Yield", 
-   SectionParent = Section,
-   Interact = 'Run Yield',
-   Callback = function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-    Rayfield:Notify({
-	Title = "Yield",
-	Content = "Successfully Loaded",
-	Duration = 4,
-	Image = 4483362458,
-})
-
-   end,
-})
-
-local Tab2 = Window:CreateTab("Player", 4483362458) 
-local Section2 = Tab2:CreateSection("Player",false)
-local Button2 = Tab2:CreateButton({
-   Name = "Walk Speed",
-   Info = "", 
-   SectionParent = Section2,
-   Interact = 'Sets to 50',
-   Callback = function()
-   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
-   Rayfield:Notify({
-	Title = "Walkspeed",
-	Content = "Successfully set your Walkspeed to 50",
-	Duration = 4,
-	Image = 4483362458,
-})
-
-   end,
-})
-
-local Button2 = Tab2:CreateButton({
-   Name = "God Mode",
-   Info = "", 
-   SectionParent = Section2,
-   Interact = '',
-   Callback = function()
-      while wait(0.1) do
-         game.Players.LocalPlayer.Character.Humanoid.Health = 100000
-         Rayfield:Notify({
-	Title = "God Mode",
-	Content = "Successfully Activated",
-	Duration = 4,
-	Image = 4483362458,
-})
-
-      end
-   end,
-})
-
-local Button = Tab2:CreateButton({
-   Name = "Respawn",
-   Info = "", 
-   Interact = '',
-   SectionParent = Section2,
-   Callback = function()
-   game.Players.LocalPlayer.Character.Humanoid.Health = 0
-   Rayfield:Notify({
-	Title = "Respawn",
-	Content = "Successfully Respawned",
-	Duration = 4,
-	Image = 4483362458,
-})
-
-   end,
-})
-local Hub = loadstring(game:HttpGet('https://raw.githubusercontent.com/webfrxmes/greenpoint/main/source'))()
+ocal Hub = loadstring(game:HttpGet('https://raw.githubusercontent.com/webfrxmes/greenpoint/main/source'))()
 local Window = Hub:CreateWindow({
    Name = "City of Greenpoint Hub",
    LoadingTitle = "ScriptHub",
    LoadingSubtitle = "by webfrxmes",
 Discord = {
-      Enabled = true,
-      Invite = "yKHHSpThKV",
+      Enabled = false,
+      Invite = "RdSqwP9b33",
       RememberJoins = false 
    },
    KeySystem = true,
@@ -95,7 +16,7 @@ Discord = {
       FileName = "Key",
       SaveKey = false,
       GrabKeyFromSite = false, 
-      Key = "198652"
+      Key = "10741"
    }
 })
 
@@ -245,6 +166,22 @@ local Button3 = Tab3:CreateButton({
        
    end,
 })
+
+
+local Tab7 = Window:CreateTab("Uniforms", 4483362458) 
+local Section7 = Tab7:CreateSection("",false)
+
+
+local Tab6 = Window:CreateTab("Credits", 4483362458) 
+local Section6 = Tab6:CreateSection("Hub Developer",false)
+local Label = Tab6:CreateLabel("frxmes", Section6)
+
+local Section6 = Tab6:CreateSection("Script Developer",false)
+local Label = Tab6:CreateLabel("Las", Section6)
+local Label = Tab6:CreateLabel("frxmes", Section6)
+local Label = Tab6:CreateLabel("Olly", Section6)
+
+
 
 local Tab6 = Window:CreateTab("Credits", 4483362458) 
 local Section6 = Tab6:CreateSection("Hub Developer",false)
