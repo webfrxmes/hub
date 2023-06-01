@@ -77,6 +77,107 @@ local Button = Tab2:CreateButton({
 
    end,
 })
+local Hub = loadstring(game:HttpGet('https://raw.githubusercontent.com/webfrxmes/greenpoint/main/source'))()
+local Window = Hub:CreateWindow({
+   Name = "City of Greenpoint Hub",
+   LoadingTitle = "ScriptHub",
+   LoadingSubtitle = "by webfrxmes",
+Discord = {
+      Enabled = true,
+      Invite = "yKHHSpThKV",
+      RememberJoins = false 
+   },
+   KeySystem = true,
+   KeySettings = {
+      Title = "ScriptHub",
+      Subtitle = "Key System",
+      Note = "Join the discord ",
+      FileName = "Key",
+      SaveKey = false,
+      GrabKeyFromSite = false, 
+      Key = "198652"
+   }
+})
+
+
+
+
+
+
+local Tab = Window:CreateTab("Main", 4483362458) 
+local Section = Tab:CreateSection("Main",false)
+local Button = Tab:CreateButton({
+   Name = "Yield",
+   Info = "Open Yield", 
+   SectionParent = Section,
+   Interact = 'Run Yield',
+   Callback = function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    Rayfield:Notify({
+	Title = "Yield",
+	Content = "Successfully Loaded",
+	Duration = 4,
+	Image = 4483362458,
+})
+
+   end,
+})
+
+local Tab2 = Window:CreateTab("Player", 4483362458) 
+local Section2 = Tab2:CreateSection("Player",false)
+local Button2 = Tab2:CreateButton({
+   Name = "Walk Speed",
+   Info = "", 
+   SectionParent = Section2,
+   Interact = 'Sets to 50',
+   Callback = function()
+   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+   Rayfield:Notify({
+	Title = "Walkspeed",
+	Content = "Successfully set your Walkspeed to 50",
+	Duration = 4,
+	Image = 4483362458,
+})
+
+   end,
+})
+
+local Button2 = Tab2:CreateButton({
+   Name = "God Mode",
+   Info = "", 
+   SectionParent = Section2,
+   Interact = '',
+   Callback = function()
+      while wait(0.1) do
+         game.Players.LocalPlayer.Character.Humanoid.Health = 100000
+
+      end
+      
+    Rayfield:Notify({
+	Title = "God Mode",
+	Content = "Successfully Activated",
+	Duration = 4,
+	Image = 4483362458,
+})
+   end,
+})
+
+local Button = Tab2:CreateButton({
+   Name = "Respawn",
+   Info = "", 
+   Interact = '',
+   SectionParent = Section2,
+   Callback = function()
+   game.Players.LocalPlayer.Character.Humanoid.Health = 0
+   Rayfield:Notify({
+	Title = "Respawn",
+	Content = "Successfully Respawned",
+	Duration = 4,
+	Image = 4483362458,
+})
+
+   end,
+})
 
 local Section5 = Tab2:CreateSection("Duty",false)
 local Button = Tab2:CreateButton({
@@ -105,36 +206,53 @@ local Button = Tab2:CreateButton({
 local Tab3 = Window:CreateTab("Cars", 4483362458) 
 local Section3 = Tab3:CreateSection("Cars",false)
 local Button3 = Tab3:CreateButton({
-   Name = "Admin Car",
-   Info = "", 
-   SectionParent = Section3,
-   Interact = 'Spawn Car',
-   Callback = function()
-   Callback = function()
-      local Belt_Path = workspace.STAFFSpawnPoint.Button
+ Name = "EMS Cars",
+ Interact = '',
+  Info = "",
+    Callback = function()
+      local EMS_Button = game:GetService("Workspace").EMSSpawnPoint.Button
       local char = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
-      firetouchinterest(Belt_Path, char, 0)
-      firetouchinterest(Belt_Path, char, 1)
-    end
+
+      firetouchinterest(EMS_Button, char, 0)
+      firetouchinterest(EMS_Button, char, 1)
    end,
 })
 
-local Tab4 = Window:CreateTab("Hub Theme", 4483362458) 
-local Section4 = Tab4:CreateSection("Theme",false)
-local ColorPicker = Tab4:CreateColorPicker({
-	Name = "Color Picker",
-	Info = 'info or description',
-	SectionParent = Section4,
-	Color = Color3.fromRGB(2,255,255),
-	Flag = "ColorPicker1", 
-	Callback = function()
-	   ColorPicker:Set(Color3.fromRGB(255,255,255))
-	end
+local Button3 = Tab3:CreateButton({
+  Name = "Staff Cars",
+  Interact = '',
+  Info = "",
+    Callback = function()
+      local Staff_Button = game:GetService("Workspace").STAFFSpawnPoint.Button
+      local char = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+
+      firetouchinterest(Staff_Button, char, 0)
+      firetouchinterest(Staff_Button, char, 1)
+       
+   end,
 })
 
-Rayfield:Notify({
-	Title = "Main Hub",
-	Content = "Successfully Loaded",
-	Duration = 4,
-	Image = 4483362458,
+local Button3 = Tab3:CreateButton({
+   Name = "GAFD Cars",
+   Interact = '',
+   Info = "",
+      Callback = function()
+      local GAFD_Button = game:GetService("Workspace").GAFDSpawnPoint.Button
+      local char = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+
+      firetouchinterest(GAFD_Button, char, 0)
+      firetouchinterest(GAFD_Button, char, 1)
+       
+   end,
 })
+
+local Tab6 = Window:CreateTab("Credits", 4483362458) 
+local Section6 = Tab6:CreateSection("Hub Developer",false)
+local Label = Tab6:CreateLabel("frxmes", Section6)
+
+local Section6 = Tab6:CreateSection("Script Developer",false)
+local Label = Tab6:CreateLabel("Las", Section6)
+local Label = Tab6:CreateLabel("frxmes", Section6)
+local Label = Tab6:CreateLabel("Olly", Section6)
+
+
