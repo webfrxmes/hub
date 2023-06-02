@@ -1,4 +1,4 @@
-ocal Hub = loadstring(game:HttpGet('https://raw.githubusercontent.com/webfrxmes/greenpoint/main/source'))()
+local Hub = loadstring(game:HttpGet('https://raw.githubusercontent.com/webfrxmes/greenpoint/main/source'))()
 local Window = Hub:CreateWindow({
    Name = "City of Greenpoint Hub",
    LoadingTitle = "ScriptHub",
